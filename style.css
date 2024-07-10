@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+#s1 {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: radial-gradient(#6A5279, #434146);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p1 {
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    font-size: 2rem;
+    color: #bbb;
+    align-self: flex-start;
+    margin-left: 20rem;
+    animation: typing 4s steps(40, end) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+h1 {
+    font-size: 10rem;
+    line-height: 1;
+}
+
+.h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+.h2 {
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+i {
+    font-size: 5rem;
+    background: linear-gradient(#F7F1BA, #918D6D);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+i:hover {
+    cursor: pointer;
+    animation: mexe 0.5s linear forwards;
+}
+
+
+@keyframes mexe {
+    0% {
+        background: #fff;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    100% {
+        transform: translateY(-20px);
+        background: #fff;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+.p2 {
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 2;
+    margin-left: 40rem;
+}
+
+.projetos_section {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1, 25rem;
+    background: linear-gradient(#751C94, #E9E6CB);
+}
+
+.projetos,
+.projetos_part2 {
+    width: 100%;
+    height: auto;
+}
+
+.t {
+    position: relative;
+    width: 40rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.c {
+    position: relative;
+    width: 15rem;
+    bottom: 23rem;
+    left: 3.125rem;
+    z-index: 2;
+}
+
+.p3 {
+    position: relative;
+    bottom: 20rem;
+}
+
+/* #opening-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+} */
+
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Ajuste conforme necessário */
+    font-size: 4rem;
+    /* Tamanho da fonte */
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    /* Nome da animação e duração */
+}
+
+.l1 {
+    animation-delay: 2s;
+}
+
+.l2 {
+    animation-delay: 2.2s;
+}
+
+.l3 {
+    animation-delay: 2.4s;
+}
+
+.l4 {
+    animation-delay: 2.6s;
+}
+
+.l5 {
+    animation-delay: 2.8s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
