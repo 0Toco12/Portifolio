@@ -30,5 +30,3 @@ setTimeout(() => {
         }, 9000); // espera 9 segundos para iniciar a transição
     }, 7000);
 }, 1000);
-
-
