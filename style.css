@@ -99,7 +99,7 @@ i:hover {
     margin-left: 40rem;
 }
 
-.projetos_section {
+#s2 {
     display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 1, 25rem;
@@ -133,60 +133,52 @@ i:hover {
     bottom: 20rem;
 }
 
-/* #opening-page {
-    position: fixed;
-    top: 0;
-    left: 0;
+#opening-page {
+    font-family: Arial, sans-serif;
+    background-color: #434146;
+    width: 100%;
+    height: 100vh;
+}
+
+svg {
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-} */
-
-
-.animation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* Ajuste conforme necessário */
-    font-size: 4rem;
-    /* Tamanho da fonte */
+    stroke: #F7F1BA;
+    filter: drop-shadow(0 0 10px #918D6D) drop-shadow(0 0 20px #918D6D) drop-shadow(0 0 30px #918D6D) drop-shadow(0 0 40px #918D6D) drop-shadow(0 0 50px #918D6D);
 }
 
 .letter {
-    display: inline-block;
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-    /* Nome da animação e duração */
+    fill: none;
+    stroke: #F7F1BA;
+    stroke-width: 0.2;
+    stroke-dasharray: 1000;
+    stroke-dasharray: 1000;
 }
 
-.l1 {
-    animation-delay: 2s;
+.hidden {
+    display: none;
 }
 
-.l2 {
-    animation-delay: 2.2s;
+.animated {
+    animation: draw 10s forwards;
 }
 
-.l3 {
-    animation-delay: 2.4s;
-}
-
-.l4 {
-    animation-delay: 2.6s;
-}
-
-.l5 {
-    animation-delay: 2.8s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 1000;
     }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.fade-out {
+    transition: opacity 1s; /* define a transição de opacidade para 1 segundo */
+    opacity: 0; /* define a opacidade final para 0 */
+}
+
+.aparecendo {
+    transition: opacity 1s;
+    opacity: 1;
 }
