@@ -5,7 +5,8 @@
     margin: 0;
 }
 
-body {
+body,
+main {
     width: 100%;
     height: 100vh;
 }
@@ -100,16 +101,40 @@ i:hover {
 }
 
 #s2 {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: radial-gradient(#6A5279, #434146); */
+    overflow: hidden;
+    background: linear-gradient(to bottom, transparent, rgba(120, 29, 150, 0.5)), url(./img/respingo.png) , radial-gradient(#6A5279, #434146);
+}
+
+#titulos {
+    background: linear-gradient(#918D6D, #1e1d1f);
+    text-align: center;
+    height: 11rem;
+    color: transparent;
+    -webkit-background-clip: text;
+    z-index: 5;
+}
+
+#s3 {
     display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 1, 25rem;
-    background: linear-gradient(#751C94, #E9E6CB);
+    background: linear-gradient(#781d96, #918D6D);
 }
 
 .projetos,
 .projetos_part2 {
     width: 100%;
     height: auto;
+}
+
+.projetos_part2 .paragrafo .p3 {
+    text-align: center;
 }
 
 .t {
@@ -128,58 +153,152 @@ i:hover {
     z-index: 2;
 }
 
-.p3 {
+.paragrafo {
     position: relative;
     bottom: 20rem;
+    padding: 2rem;
 }
 
-#opening-page {
-    font-family: Arial, sans-serif;
-    background-color: #434146;
+h2 {
+    font-size: 2.5rem;
+}
+
+.p3 {
+    font-size: 1.5rem;
+}
+
+#s4 {
+    padding: 0 3rem;
+    background: linear-gradient(#918D6D, #6A5279);
+    padding-bottom: 4rem;
+}
+
+#s4 h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+hr {
     width: 100%;
-    height: 100vh;
+    border: 0;
+    height: 0.2rem;
+    background: linear-gradient(to right, transparent, #000, transparent);
 }
 
-svg {
+.hrDoH {
+    background: linear-gradient(to right, transparent, transparent, #000, transparent, transparent);
+}
+
+#s4 dl{
+    text-align: center;
+}
+
+#s4 p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#s4 dd{
+    font-size: 1.5rem;
+}
+
+#s4 dt{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+li {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+/* Estilos para o intro */
+#intro {
+    position: fixed;
     width: 100%;
     height: 100%;
-    stroke: #F7F1BA;
-    filter: drop-shadow(0 0 10px #918D6D) drop-shadow(0 0 20px #918D6D) drop-shadow(0 0 30px #918D6D) drop-shadow(0 0 40px #918D6D) drop-shadow(0 0 50px #918D6D);
+    background-color: #1e1d1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-out;
 }
 
-.letter {
+.intro-text {
+    width: 80%;
+    height: 100%;
+}
+
+.svg-text {
+    font-family: Arial, sans-serif;
+    font-size: 0.5rem;
     fill: none;
-    stroke: #F7F1BA;
-    stroke-width: 0.2;
-    stroke-dasharray: 1000;
-    stroke-dasharray: 1000;
-}
-
-.hidden {
-    display: none;
-}
-
-.animated {
-    animation: draw 10s forwards;
+    stroke: #fff;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: draw 6s forwards, fadeOut 2s forwards 4s;
 }
 
 @keyframes draw {
-    0% {
-        stroke-dashoffset: 1000;
-    }
-
     100% {
         stroke-dashoffset: 0;
+        text-shadow: 0 0 10px #c4c4c4,
+            0 0 20px #c4c4c4,
+            0 0 40px #c4c4c4,
+            0 0 80px #c4c4c4,
+            0 0 120px #c4c4c4,
+            0 0 160px #c4c4c4;
     }
 }
 
+@keyframes fadeOut {
+    0% {
+        fill: #fff;
+    }
+
+    100% {
+        fill: #fff;
+        opacity: 0;
+        transform: translateY(-20px);
+        text-shadow: 0 0 10px #c4c4c4,
+            0 0 20px #c4c4c4,
+            0 0 40px #c4c4c4,
+            0 0 80px #c4c4c4,
+            0 0 120px #c4c4c4,
+            0 0 160px #c4c4c4;
+    }
+}
+
+/* Oculta o intro após a animação */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#main-content {
+    display: none;
+}
+
 .fade-out {
-    transition: opacity 1s; /* define a transição de opacidade para 1 segundo */
-    opacity: 0; /* define a opacidade final para 0 */
+    transition: opacity 1s;
+    /* define a transição de opacidade para 1 segundo */
+    opacity: 0;
+    /* define a opacidade final para 0 */
 }
 
 .aparecendo {
     transition: opacity 1s;
     opacity: 1;
 }
-
