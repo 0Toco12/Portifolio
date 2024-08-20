@@ -106,13 +106,19 @@ i:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: radial-gradient(#6A5279, #434146); */
     overflow: hidden;
-    background: linear-gradient(to bottom, transparent, rgba(120, 29, 150, 0.5)), url(./img/respingo.png) , radial-gradient(#6A5279, #434146);
+    background: linear-gradient(to bottom, transparent, rgba(120, 29, 150, 0.1)), url(./img/respingo.png) , radial-gradient(#6A5279, #434146);
 }
 
-#titulos {
+#s2 h1 {
     background: linear-gradient(#918D6D, #1e1d1f);
+}
+
+#s4 h1 {
+    background: linear-gradient(#6A5279, #1e1d1f);
+}
+
+#s2 h1, #s4 h1 {
     text-align: center;
     height: 11rem;
     color: transparent;
