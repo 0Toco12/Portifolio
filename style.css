@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root {
+    --cor-fundo: radial-gradient(#6A5279, #434146);
+    --cor-fundo2: linear-gradient(#781d96, #918D6D);
+    --cor-fundo3: linear-gradient(#918D6D, #6A5279);
+    --cor-fundo-projetos: linear-gradient(to bottom, transparent, rgba(120, 29, 150, 0.1)), url(./img/respingo.png) , radial-gradient(#6A5279, #434146);
+    --cor-branco: #fff;
+    --cor-i: linear-gradient(#F7F1BA, #918D6D);
+    --cor-intro: #c4c4c4;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -14,8 +24,8 @@ main {
 #s1 {
     height: 100%;
     width: 100%;
-    color: #fff;
-    background: radial-gradient(#6A5279, #434146);
+    color: var(--cor-branco);
+    background: var(--cor-fundo);
     display: none;
     flex-direction: column;
     align-items: center;
@@ -48,6 +58,13 @@ h1 {
     line-height: 1;
 }
 
+.p2 {
+    font-size: 1.5rem;
+    color: var(--cor-branco);
+    line-height: 2;
+    margin-left: 40rem;
+}
+
 .h1 {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -65,14 +82,14 @@ h1 {
     font-variation-settings: "slnt" 0;
 }
 
-i {
+#iDoTitulo {
     font-size: 5rem;
-    background: linear-gradient(#F7F1BA, #918D6D);
+    background: var(--cor-i);
     -webkit-background-clip: text;
     color: transparent;
 }
 
-i:hover {
+#iDoTitulo:hover {
     cursor: pointer;
     animation: mexe 0.5s linear forwards;
 }
@@ -80,24 +97,17 @@ i:hover {
 
 @keyframes mexe {
     0% {
-        background: #fff;
+        background: var(--cor-branco);
         -webkit-background-clip: text;
         color: transparent;
     }
 
     100% {
         transform: translateY(-20px);
-        background: #fff;
+        background: var(--cor-branco);
         -webkit-background-clip: text;
         color: transparent;
     }
-}
-
-.p2 {
-    font-size: 1.5rem;
-    color: #fff;
-    line-height: 2;
-    margin-left: 40rem;
 }
 
 #s2 {
@@ -107,7 +117,7 @@ i:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(to bottom, transparent, rgba(120, 29, 150, 0.1)), url(./img/respingo.png) , radial-gradient(#6A5279, #434146);
+    background: var(--cor-fundo-projetos);
 }
 
 #s2 h1 {
@@ -130,7 +140,7 @@ i:hover {
     display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 1, 25rem;
-    background: linear-gradient(#781d96, #918D6D);
+    background: var(--cor-fundo2);
 }
 
 .projetos,
@@ -175,7 +185,7 @@ h2 {
 
 #s4 {
     padding: 0 3rem;
-    background: linear-gradient(#918D6D, #6A5279);
+    background: var(--cor-fundo3);
     padding-bottom: 4rem;
 }
 
@@ -233,6 +243,10 @@ hr {
     font-size: 1.5rem;
 }
 
+#s4 dd i {
+    color: #021b5c;
+}
+
 #s4 dt{
     font-size: 2rem;
     margin-top: 1rem;
@@ -248,7 +262,7 @@ li {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #1e1d1f;
+    background: #1e1d1f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -266,7 +280,7 @@ li {
     font-family: Arial, sans-serif;
     font-size: 0.5rem;
     fill: none;
-    stroke: #fff;
+    stroke: var(--cor-branco);
     stroke-width: 0.1;
     stroke-dasharray: 50;
     stroke-dashoffset: 50;
@@ -276,30 +290,30 @@ li {
 @keyframes draw {
     100% {
         stroke-dashoffset: 0;
-        text-shadow: 0 0 10px #c4c4c4,
-            0 0 20px #c4c4c4,
-            0 0 40px #c4c4c4,
-            0 0 80px #c4c4c4,
-            0 0 120px #c4c4c4,
-            0 0 160px #c4c4c4;
+        text-shadow: 0 0 10px var(--cor-intro),
+            0 0 20px var(--cor-intro),
+            0 0 40px var(--cor-intro),
+            0 0 80px var(--cor-intro),
+            0 0 120px var(--cor-intro),
+            0 0 160px var(--cor-intro);
     }
 }
 
 @keyframes fadeOut {
     0% {
-        fill: #fff;
+        fill: var(--cor-branco);
     }
 
     100% {
-        fill: #fff;
+        fill: var(--cor-branco);
         opacity: 0;
         transform: translateY(-20px);
-        text-shadow: 0 0 10px #c4c4c4,
-            0 0 20px #c4c4c4,
-            0 0 40px #c4c4c4,
-            0 0 80px #c4c4c4,
-            0 0 120px #c4c4c4,
-            0 0 160px #c4c4c4;
+        text-shadow: 0 0 10px var(--cor-intro),
+            0 0 20px var(--cor-intro),
+            0 0 40px var(--cor-intro),
+            0 0 80px var(--cor-intro),
+            0 0 120px var(--cor-intro),
+            0 0 160px var(--cor-intro);
     }
 }
 
